@@ -46,7 +46,7 @@ export const fetchDailyData = () => {
                 filterDate.setMonth(filterDate.getMonth() - 1);
                 filterDate = filterDate.getTime();
                 const transformedData = res.data.map(item => ({ date: item[0] * 1000, price: (item[1] / 100).toFixed(2) / 1 }))
-                    .filter(el => el.date > filterDate);
+                    .filter(el => el.date > filterDate).reverse();
                 dispatch(setDailyData(transformedData));
             },
                 res => {
@@ -86,7 +86,7 @@ export const fetchHourlyData = () => {
                         date: response.data.lookup.time.iso,
                         price: (response.data.lookup.price / 100).toFixed(2)/1,
                     }
-                });
+                }).reverse();
                 dispatch(setHourlyData(transformedData));
             }))
             .catch(err => {
