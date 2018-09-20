@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import './index.css';
+import classes from './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import reducer from './store/reducer';
@@ -17,7 +17,7 @@ const store = createStore(reducer, composeEnhancers(
 
 const app = (
     <Provider store={store}>
-        <App />
+        <App className={classes.App} />
     </Provider>
 );
 

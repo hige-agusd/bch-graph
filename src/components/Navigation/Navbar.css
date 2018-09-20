@@ -1,0 +1,8 @@
+.Navbar {
+    background-color: #282828cc;
+    height: 72px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    z-index: 500;
+}

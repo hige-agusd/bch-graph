@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-// import Aux from '../Aux/Aux';
 import classes from './Layout.css';
 import Navbar from '../../components/Navigation/Navbar';
 

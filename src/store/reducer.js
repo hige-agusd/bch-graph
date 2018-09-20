@@ -1,6 +1,8 @@
 const initialState = {
-    data: [],
-    selectedView: '24h',
+    dailyData: [],
+    hourlyData: [],
+    currentPrice: {},
+    selectedView: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,10 +12,20 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 selectedView: action.selectedView,
             }
-        case 'SET_DATA':
+        case 'SET_DAILY_DATA':
             return {
                 ...state,
-                data: action.data,
+                dailyData: action.dailyData,
+            }
+        case 'SET_HOURLY_DATA':
+            return {
+                ...state,
+                hourlyData: action.hourlyData,
+            }
+        case 'SET_CURRENT_PRICE':
+            return {
+                ...state,
+                currentPrice: action.price,
             }
         default:
             return state;

@@ -1,4 +1,6 @@
 .Content {
-    margin-top: 72px;
-    background-color: #191919;
+    background-color: #121212cc;
+    height: 100vh;
+    margin-top:  -72px;
+    padding-top:  72px;
 }
